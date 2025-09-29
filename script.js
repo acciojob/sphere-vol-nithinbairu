@@ -7,10 +7,10 @@ function volume_sphere() {
 
     if (!isNaN(radius) && radius > 0) {
       const volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
-      const roundedVolume = Math.floor(volume * 10000) / 10000;
-      vol.value = `Calculated volume should be approximately ${roundedVolume}.`;
+      const roundedVolume =Math.floor(Math.round( volume * 10000)) / 10000;
+      vol.value = roundedVolume
     } else {
-      vol.value = `Calculated volume should be 'NaN' due to invalid input.`;
+      vol.value = "NaN";
     }
   });
 } 
